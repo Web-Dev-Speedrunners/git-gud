@@ -1,0 +1,11 @@
+
+  
+  #sec-text {
+    top: 80%;
+    left: 30%;
+    font-size: 20px;
+    color: rgb(79, 60, 60);
+    position: absolute;
+    transform: translate(-70%, -70%);
+  }
+  
