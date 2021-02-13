@@ -9,8 +9,10 @@ const HomePage = () => {
       <h4> The Value of Trees</h4>
       <ul>
         <li>For the purification of air</li>
-        <li>produce oxygen</li>
-
+        <li>Produce oxygen</li>
+        <li>Store Carbon</li>
+        <li>Are homes for many birds and animals</li>
+        <li>Vital in energy conservation</li>
       </ul>
   </div>
 
