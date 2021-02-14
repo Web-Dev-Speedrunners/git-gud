@@ -1,0 +1,1 @@
+export const TreflePlantCarouselHeight = "60vh"
