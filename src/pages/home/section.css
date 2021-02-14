@@ -17,3 +17,12 @@
     position: absolute;
     transform: translate(-70%, -70%);
   }
+
+  #bottom-sec-text {
+    top: 82%;
+    left: 80%;
+    font-size: 20px;
+    color: rgb(79, 60, 60);
+    position: absolute;
+    transform: translate(-70%, -70%);
+  }
