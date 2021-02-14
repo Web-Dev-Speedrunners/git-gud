@@ -13,6 +13,15 @@ const Section = () => {
           <li>as homes for many birds and animals</li>
           <li>for energy conservation</li>
       </ul>
+
+      <h4>World without Trees </h4>
+         <ul>
+          <li>for the purification of air</li>
+          <li>to produce oxygen</li>
+          <li>to store carbon</li>
+          <li>as homes for many birds and animals</li>
+          <li>for energy conservation</li>
+      </ul>
   </div>
     )
 }
