@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Button } from 'reactstrap'
 
 const Navbar = () => (
-  <div class="text-center">
+  <div className="text-center">
     <div>
       Pretend this is navbar
     </div>
