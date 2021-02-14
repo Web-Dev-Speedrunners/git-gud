@@ -3,15 +3,15 @@ import "./section.css";
 
 const BottomSection = () => {
     return( 
-    <div>
-        <h4>World without trees </h4>
-        <ul>
-            <li>No Trees... No Humans.</li>
-            <li>Higher amounts of carbon</li>
-            <li>Filthy air</li>
-            <li>Destruction of many organisms</li>
-            <li>Climate change and enviornment destruction</li>
-        </ul>
+    <div id = "bottom-sec-text">
+        <h4>Deforestation</h4>
+        <p>
+             Deforestation is the clearing of large amounts of trees. 
+             This act has been greatly accelerated by human activities since the past century. 
+             Deforestation affects ecosystems, biodiversity, and the climate. 
+             This must be stopped for the preservation and conservation of trees. 
+          
+        </p>
     </div>
      
     )
