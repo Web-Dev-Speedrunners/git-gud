@@ -5,34 +5,59 @@ import {
   JapanesePlants,
   TallestPlants,
 } from "../../services/trefle";
-import { Col, Container, Row } from "reactstrap";
-import "./index.css";
+import { Col, Container } from "reactstrap";
 import TreflePlantCarousel from "../../components/carousel/trefle_plant_carousel";
+import { makeStyles } from "@material-ui/styles";
+import { THEME_COLOR } from "../../constants/theme";
+
+const useStyles = makeStyles({
+  root: {
+    margin: 0,
+    padding: 0,
+  },
+  pageHeader: {
+    backgroundColor: THEME_COLOR.Secondary,
+    color: THEME_COLOR.Primary,
+    marginTop: "24px",
+    textAlign: "left",
+  },
+  section: {
+    marginBottom: "40px",
+  },
+  carouselTitle: {
+    color: THEME_COLOR.Secondary,
+    textAlign: "right",
+    fontWeight: 500,
+  },
+});
 
 const FactsPage = () => {
+  const classes = useStyles();
+
   const renderCarousel = (title, data) => (
     <Col>
-      <TreflePlantCarousel
-        plants={data}
-        title={title}
-      />
+      <section className={classes.section}>
+        <h2 className={classes.carouselTitle}>{title}</h2>
+        <TreflePlantCarousel plants={data} title={title} />
+      </section>
     </Col>
   );
 
-  const antacticPlants = useMemo(AntarcticPlants, []);
+  const antarcticPlants = useMemo(AntarcticPlants, []);
   const ediblePlants = useMemo(EdiblePlants, []);
   const tallestPlants = useMemo(TallestPlants, []);
   const japanesePlants = useMemo(JapanesePlants, []);
 
   return (
-    <div>
+    <div className={classes.root}>
       <Container>
-        <Row xs={2}>
-          {renderCarousel("Pants from the Antarctic", antacticPlants)}            
-          {renderCarousel("Pants from the Japan", japanesePlants)}            
-          {renderCarousel("Edible Plants", ediblePlants)}            
-          {renderCarousel("Tallest Plants", tallestPlants)}            
-        </Row>
+        <h1 className={classes.pageHeader}>Trees Around the World</h1>
+        <div>
+          {renderCarousel("Antarctic", antarcticPlants)}
+          {renderCarousel("Japane", japanesePlants)}
+          {renderCarousel("Edible Plants", ediblePlants)}
+          {renderCarousel("Tallest Plants", tallestPlants)}
+        </div>
       </Container>
     </div>
   );
