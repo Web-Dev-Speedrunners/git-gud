@@ -6,7 +6,7 @@ const SupportInfo = () => {
   const renderOrganization = (name, link, summary) => (
     <li>
       <div>
-        <a target="_blank" href={link}>{name}</a>
+        <a target="_blank" rel="noreferrer" href={link}>{name}</a>
         <p>{summary}</p>
       </div>
     </li>
@@ -17,9 +17,9 @@ const SupportInfo = () => {
   return (
     <div>
       <ul>
-        {renderOrganization("Organization", "https://www.w3schools.com", "About Section")}
-        {renderOrganization("Organization", "https://www.w3schools.com", "About Section")}
-        {renderOrganization("Organization", "https://www.w3schools.com", "About Section")}
+        {renderOrganization("Organization", "https://teamtrees.org/", "About Section")}
+        {renderOrganization("Organization", "https://teamtrees.org/", "About Section")}
+        {renderOrganization("Organization", "https://teamtrees.org/", "About Section")}
       </ul>
     </div>
   )
