@@ -1,11 +1,31 @@
 
   
   #sec-text {
-    top: 80%;
+    top: 70%;
     left: 30%;
     font-size: 20px;
     color: rgb(79, 60, 60);
     position: absolute;
     transform: translate(-70%, -70%);
   }
+  
+  #right-sec-text {
+    top: 72%;
+    left: 80%;
+    font-size: 20px;
+    color: rgb(79, 60, 60);
+    position: absolute;
+    transform: translate(-70%, -70%);
+  }
+
+  #bottom-sec-text {
+    top: 96%;
+    left: 55%;
+    font-size: 20px;
+    color: rgb(79, 60, 60);
+    position: absolute;
+    transform: translate(-70%, -70%);
+    text-align: center;
+  }
+
   

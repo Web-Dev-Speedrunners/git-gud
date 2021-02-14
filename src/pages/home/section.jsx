@@ -13,7 +13,8 @@ const Section = () => {
           <li>as homes for many birds and animals</li>
           <li>for energy conservation</li>
       </ul>
-  </div>
+    </div>
+     
     )
 }
 
