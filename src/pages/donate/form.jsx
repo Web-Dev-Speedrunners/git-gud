@@ -1,44 +1,37 @@
 import React from 'react';
 import { Button, Form, Col, InputGroup, } from 'react-bootstrap';
+import range from '../../util/range'
 
-const MONTHS_ARR = Array.from({length: 12}, (_, i) => i + 1);
 const CURR_YEAR = new Date().getFullYear();
-
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from
-const range = (start, stop, step) => Array.from({ length: (stop - start) / step + 1}, (_, i) => start + (i * step));
-
 
 const DonateForm = () => {
 
-  const handleSubmit = (event) => {
-    // alert('A name was submitted: ' + this.state.value)
-    // console.log(event);
-    // debugger
-    // event.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
     console.log("submit")
   }
 
   return (
-    <Form onSubmit={() => handleSubmit(this)}>
+    <Form onSubmit={(e) => handleSubmit(e)}>
       
       <Form.Row>
-        <Form.Group as={Col} controlId="formGridFirstName">
+        <Form.Group as={Col}>
           <Form.Label>First Name</Form.Label>
           <Form.Control type="text" placeholder="First Name" />
         </Form.Group>
 
-        <Form.Group as={Col} controlId="formGridLastName">
+        <Form.Group as={Col}>
           <Form.Label>Last Name</Form.Label>
           <Form.Control type="text" placeholder="Last Name" />
         </Form.Group>
       </Form.Row>
 
-      <Form.Group controlId="formGridEmail">
+      <Form.Group>
         <Form.Label>Email</Form.Label>
         <Form.Control type="email" placeholder="example@test.com" />
       </Form.Group>
 
-      <Form.Group controlId="fromDonation">
+      <Form.Group>
         <Form.Label>Donation Amount</Form.Label>
 
         <InputGroup className="mb-3">
@@ -53,7 +46,7 @@ const DonateForm = () => {
 
       </Form.Group>
 
-      <Form.Group controlId="formPaymentFrequency">
+      <Form.Group>
         <Form.Check.Label>Donation Frequency</Form.Check.Label>
         <Form.Check 
           defaultChecked
@@ -70,13 +63,13 @@ const DonateForm = () => {
         />
       </Form.Group>
 
-      <Form.Group controlId="fromCreditCard">
+      <Form.Group>
         <Form.Label>Credit Card</Form.Label>
         <Form.Control type="number" placeholder="Credit Card Number" />
       </Form.Group>
 
       {/* TODO: Get these two rows on the same row */}
-      <Form.Group controlId="fromExpiration">
+      <Form.Group>
         <Form.Label>Expiration Date</Form.Label>
         <Form.Row>
           <Form.Control
@@ -85,7 +78,7 @@ const DonateForm = () => {
             custom
           >
             {
-              MONTHS_ARR.map((item, i) => 
+              range(1, 12, 1).map((item, i) => 
                 <option key={item} value={item}>{item.toString().length < 2? "0" + item.toString(): item.toString()}</option>
               )
             }
@@ -106,7 +99,7 @@ const DonateForm = () => {
         </Form.Row>
       </Form.Group>
 
-      <Form.Group controlId="fromSecurityCode">
+      <Form.Group>
         <Form.Label>Security Code</Form.Label>
         <Form.Control type="number" placeholder="123" />
       </Form.Group>
