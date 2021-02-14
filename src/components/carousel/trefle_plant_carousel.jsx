@@ -25,7 +25,7 @@ const useStyles = makeStyles({
   },
 });
 
-const TreflePlantCarousel = ({ plants, title }) => {
+const TreflePlantCarousel = ({ plants }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [plantDetail, setPlantDetail] = useState(plants[0]);
 
@@ -115,7 +115,6 @@ TreflePlantCarousel.propTypes = {
   plants: PropTypes.arrayOf(
     PropTypes.object // TreflePlant class
   ),
-  title: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default TreflePlantCarousel;

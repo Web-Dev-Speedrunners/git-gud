@@ -54,7 +54,7 @@ const FactsPage = () => {
         <h1 className={classes.pageHeader}>Trees Around the World</h1>
         <div>
           {renderCarousel("Antarctic", antarcticPlants)}
-          {renderCarousel("Japane", japanesePlants)}
+          {renderCarousel("Japan", japanesePlants)}
           {renderCarousel("Edible Plants", ediblePlants)}
           {renderCarousel("Tallest Plants", tallestPlants)}
         </div>
