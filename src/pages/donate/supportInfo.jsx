@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 const SupportInfo = () => {
 
   const renderOrganization = (name, link, summary) => (
@@ -12,8 +11,6 @@ const SupportInfo = () => {
     </li>
   );
   
-
-
   return (
     <div>
       <ul>

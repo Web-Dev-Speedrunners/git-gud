@@ -11,7 +11,7 @@ import {
 	Card
 } from 'react-bootstrap'
 
-const styles = makeStyles({
+const useStyles = makeStyles({
 	pageHeader: {
 		backgroundColor: THEME_COLOR.Secondary,
 		color: THEME_COLOR.Primary,
@@ -23,13 +23,13 @@ const styles = makeStyles({
 })
 
 const DonatePage = () => {
-	const style_classes = styles()
+	const styleClasses = useStyles()
 
   return (
     <>
 		{/* TODO: Add function that will get the current donation amount */}
 		<Container className="text-center">
-			<h1 className={style_classes.pageHeader}>Help Save Trees Today</h1>
+			<h1 className={styleClasses.pageHeader}>Help Save Trees Today</h1>
 			<p>Total Donation</p>
 			<p>$Donation$</p>
 		</Container>
@@ -41,7 +41,7 @@ const DonatePage = () => {
 					{/* <DonateForm /> */}
 					<Card>
 						<Card.Header>
-							<h3 className={style_classes.titles}>Donate</h3>
+							<h3 className={styleClasses.titles}>Donate</h3>
 						</Card.Header>
 						<Card.Body>
 							<DonateForm />
@@ -49,7 +49,7 @@ const DonatePage = () => {
 					</Card>
 				</Col>
 				<Col>
-					<h3 className={style_classes.titles}>Broke? Get Involved!</h3>
+					<h3 className={styleClasses.titles}>Broke? Get Involved!</h3>
 					<SupportInfo />
 				</Col>
 			</Row>
