@@ -3,7 +3,7 @@ import "./section.css";
 
 const RightSection = () => {
     return( 
-    <div id="sec-text">
+    <div id="right-sec-text">
         <h4>World without trees </h4>
         <ul>
             <li>No Trees... No Humans.</li>
