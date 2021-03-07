@@ -48,7 +48,7 @@ const TreflePlantCarousel = ({ plants }) => {
   const items = useMemo(
     () =>
       plants.map((entry, index) => ({
-        src: entry.imageUrl || "",
+        src: entry.image || entry.imageUrl || "",
         header: entry.commonName || entry.scientificName || "unknown",
         caption: "",
         key: index,

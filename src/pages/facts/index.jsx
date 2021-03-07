@@ -44,9 +44,11 @@ const FactsPage = () => {
   );
 
   const antarcticPlants = useMemo(AntarcticPlants, []);
-  const ediblePlants = useMemo(EdiblePlants, []);
-  const tallestPlants = useMemo(TallestPlants, []);
+  const ediblePlants = useMemo(() => EdiblePlants(), []);
+  const tallestPlants = useMemo(() => TallestPlants(), []);
   const japanesePlants = useMemo(JapanesePlants, []);
+
+  console.log(japanesePlants)
 
   return (
     <div className={classes.root}>
